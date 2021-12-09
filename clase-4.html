@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 4</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script defer src="row.js"></script>
+
+</head>
+<body>
+  <div class="d-flex flex-column" id="app">
+      <h1 class="col-12">Clase 4</h1>
+      <table class="table table-stripped">
+        <tr>
+          <th>Nombre del empleado</th>
+          <th>Remuneración</th>
+          <th>Lenguajes</th>          
+        </tr>
+        <tbody>
+          <tr is="row" :textBootstrap="person1.css.textColor" :name="person1.name" :salary="person1.salary" :languages="person1.languages"></tr>
+          <tr is="row" :name="person2.name" :salary="person2.salary" :languages="person2.languages"></tr>
+          <tr is="row" :name="person3.name" :salary="person3.salary" :languages="person3.languages"></tr>  
+        </tbody>
+      </table>
+  </div>
+</body>
+</html>
